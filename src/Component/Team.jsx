@@ -18,12 +18,14 @@ function Team() {
     }
     useEffect(()=>{
         if(teamData.length > 0){
-            let a = teamData.reduce((acc, elem) =>{
+            let a = teamData.reduce((acc, elem ) =>{
                 return acc=acc+elem.age;
             },0)
             console.log(a);
             setAverageAge(a/teamData.length)
 
+        }else{
+            setAverageAge(0)
         }
        
 
